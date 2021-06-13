@@ -111,7 +111,7 @@ function buildCharts(sample) {
     // 9. Create the layout for the bar chart. 
     var barLayout = {
       title: "Top 10 Bacteria Cultures Found",
-      yaxis: otuIds
+      yaxis: otuIds,
     };
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
@@ -157,12 +157,11 @@ function buildCharts(sample) {
       domain: { x: [0, 1], y: [0, 1]},
       value: wfreq,
       title: 
-        {text: "Scrubs per Week"},
+        {text: "<b>Belly Button Washing Frequency</b> <br>Scrubs per Week"},
       type: "indicator",
       mode: "gauge+number",
       gauge: {axis: {range: [null, 10], tickwidth: 2, tickcolor: "black"},
         bar: {color:"black"},
-        bgcolor: "white",
         borderwidth: 2,
         bordercolor: "gray",
         steps: [
